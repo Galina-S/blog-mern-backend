@@ -10,7 +10,7 @@ import { checkAuth, handleValidationErrors } from './utils/index.js';
 
 mongoose
     .connect(
-        'mongodb+srv://admin:wwwwww@cluster0.i9dqw5g.mongodb.net/blog?retryWrites=true&w=majority')
+        process.env.MONGODB_URI)
     .then(() => console.log('DB ok'))
     .catch((err) => console.log('DB error', err));
 
